@@ -8,9 +8,6 @@ Follow this link for the detailed presentation on the workshop:
 https://docs.google.com/presentation/d/12nfykYUDoxzvGRUvlTABwsbYTzY8rAJOVsS8b7XVJFo/edit?usp=sharing
 
 
-
-<code> 
   Install node on your device.
   For running the code, download the repository.
-  Unzip the directory and run "node server.js"
-</code>
+  Unzip the directory and run <code> node server.js </code> from your command prompt / terminal

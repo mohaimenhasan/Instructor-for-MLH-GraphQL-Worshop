@@ -50,17 +50,29 @@ function fetchProducts() {
 }
 
 // // Buys new power up by creating new checkout with item
-// function buyPowerUp(variantId) {
-//   var query = `
-//     mutation {
-//       checkoutCreate() {
-//
-//         }
-//       }
-//     `;
-//
-//   return makeRequest(query);
-// }
+
+
+function buyPowerUp(variantId) {
+  var query = `
+    mutation {
+      checkoutCreate(input: {
+        lineItems: [{
+          quantity: 1,
+          variantId: "${variantId}"
+
+        }]
+      }) {
+      checkout  {
+          webUrl
+          completedAt
+          id
+          }
+        }
+      }
+    `;
+
+  return makeRequest(query);
+}
 //
 // Checks completed purchases by querying checkouts with `completedAt` value
 function checkCompletedPurchases(checkoutIds) {
